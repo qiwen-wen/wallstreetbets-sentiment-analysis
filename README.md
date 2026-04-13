@@ -76,4 +76,3 @@ The final model achieves an **AUC of 0.80**, substantially outperforming all bas
 
 - WSB data sourced from Reddit via the Pushshift API
 - Price data via [yfinance](https://github.com/ranaroussi/yfinance)
-- Project completed as part of **CSE 158: Recommender Systems & Web Mining** at UC San Diego
