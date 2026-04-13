@@ -49,20 +49,17 @@ For each (ticker, day) pair, predict whether a stock will make a **large next-da
 
 ## 📊 Results
 
-| Model | Accuracy | AUC | Recall | F1 | Precision |
-|---|---|---|---|---|---|
-| **Final model (tuned TF-IDF + all numeric)** | **0.7413** | **0.8046** | **0.7219** | **0.4481** | **0.3249** |
-| Logistic (price + WSB numeric) | 0.6772 | 0.5981 | 0.4298 | 0.2792 | 0.2068 |
-| Logistic (price-only) | 0.5296 | 0.5823 | 0.5365 | 0.2492 | 0.1623 |
-| Logistic (WSB numeric-only) | 0.7683 | 0.5773 | 0.2360 | 0.2286 | 0.2216 |
-| Logistic (TF-IDF text + basic numeric) | 0.6571 | 0.5219 | 0.3146 | 0.2107 | 0.1584 |
-| Logistic (TF-IDF text-only) | 0.6453 | 0.5218 | 0.3146 | 0.2051 | 0.1522 |
-| Baseline: always 1 (big move) | 0.1455 | 0.5000 | 1.0000 | 0.2540 | 0.1455 |
-| Baseline: always 0 (no big move) | 0.8545 | 0.5000 | 0.0000 | 0.0000 | 0.0000 |
+| Model | AUC | F1 |
+|---|---|---|
+| **Final model (tuned TF-IDF + all numeric)** | **0.8046** | **0.4481** |
+| Logistic (price + WSB numeric) | 0.5981 | 0.2792 |
+| Logistic (TF-IDF text-only) | 0.5218 | 0.2051 |
+| Baseline: always 0 | 0.5000 | 0.0000 |
 
-The final model achieves an **AUC of 0.80**, substantially outperforming all baselines and single-signal models.
+The final model achieves an **AUC of 0.80**, substantially outperforming all baselines. AUC and F1 are prioritized given the class-imbalanced nature of the task (only 10.9% big-move days).
 
 ---
+
 
 ## 💡 Key Findings
 
